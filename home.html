@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FruitAi</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js" defer></script>
+</head>
+<body>
+    <div class="home-container">
+        <header>
+            <h1>FruitAi</h1>
+            <p>Be Healthy!</p>
+        </header>
+        <div class="button-container">
+            <a href="/login.html" class="button login-button" >
+                <img src="images/login-icon.png" alt="Login">
+                <span>Login</span>
+            </a>
+            <a href="/chatbot.html" class="button chat-button">
+                <img src="images/chat-icon.png" alt="Chat">
+                <span>Chat</span>
+            </a>
+            <a href="/faq.html" class="button faqs-button" >
+                <img src="images/faqs-icon.png" alt="FAQs">
+                <span>FAQs</span>
+            </a>
+            <a href="/about.html" class="button about-button">
+                <img src="images/about-icon.png" alt="About">
+                <span>About</span>
+            </a>
+           
+            <a href="#" class="button translate-button" data-target="translate-modal">
+                <img src="images/translate-icon.png" alt="Translate">
+                <span>Translate</span>
+            </a>
+        </div>
+        
+        
+
+        <!-- Translate Modal -->
+        <div id="translate-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" data-target="translate-modal">&times;</span>
+                <h2>Select Language</h2>
+                <select>
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="zh">Chinese</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modals -->
+    <script>
+        function openLoginModal() {
+            document.getElementById('login-modal').style.display = 'block';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('login-modal').style.display = 'none';
+        }
+
+        // Add event listeners to close modals when clicking outside of them
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
